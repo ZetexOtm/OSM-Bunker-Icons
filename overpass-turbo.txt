@@ -8,7 +8,9 @@ The original search was:
 (
   // query part for: “military=bunker”
   node["military"="bunker"]({{bbox}});
+  node["historic"="fort"]({{bbox}});
   node["man_made"="adit"]({{bbox}});
+//  node["entrance"="yes"]({{bbox}});
   way["military"="bunker"]({{bbox}});
   relation["military"="bunker"]({{bbox}});
 );
@@ -26,6 +28,11 @@ node[historic=fort] {
 
 node[man_made=adit] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_adit.png');
+  icon-width: 15;
+}
+
+node[entrance=yes] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_entrance.png');
   icon-width: 15;
 }
 
@@ -99,6 +106,11 @@ node[old_name=~/.*kwk.*/] {
   icon-width: 15;
 }
 
+node[old_name=~/.*pak.*/] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_at.png');
+  icon-width: 15;
+}
+
 node[name=~/.*skyte.*/] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_foxhole.png');
   icon-width: 15;
@@ -119,7 +131,7 @@ node[name=~/.*obs.*/] {
   icon-width: 15;
 }
 
-node[name=~/.*flame.*/] {
+node[name=~/.*flam.*/] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_flame.png');
   icon-width: 15;
 }
