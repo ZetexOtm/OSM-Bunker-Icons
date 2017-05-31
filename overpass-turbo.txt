@@ -8,9 +8,8 @@ The original search was:
 (
   // query part for: “military=bunker”
   node["military"="bunker"]({{bbox}});
-  node["historic"="fort"]({{bbox}});
   node["man_made"="adit"]({{bbox}});
-//  node["entrance"="yes"]({{bbox}});
+  node["entrance"~"./*"]({{bbox}});
   way["military"="bunker"]({{bbox}});
   relation["military"="bunker"]({{bbox}});
 );
@@ -31,7 +30,7 @@ node[man_made=adit] {
   icon-width: 15;
 }
 
-node[entrance=yes] {
+node[entrance] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_entrance.png');
   icon-width: 15;
 }
@@ -43,6 +42,26 @@ node[military=bunker] {
 
 node[bunker_type=technical] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_technical.png');
+  icon-width: 15;
+}
+
+node[technical_type=searchlight] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_search.png');
+  icon-width: 15;
+}
+
+node[technical_type=sound_locator] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_sound.png');
+  icon-width: 15;
+}
+
+node[technical_type=rangefinder] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_range.png');
+  icon-width: 15;
+}
+
+node[technical_type=radar] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_radar.png');
   icon-width: 15;
 }
 
@@ -63,6 +82,15 @@ node[bunker_type=mortar_position] {
 
 node[bunker_type=gun_emplacement] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_gun.png');
+  icon-width: 15;
+}
+node[gun_emplacement_type=antiaircraft] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_aa.png');
+  icon-width: 15;
+}
+
+node[gun_emplacement_type=antitank] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_at.png');
   icon-width: 15;
 }
 
@@ -86,52 +114,27 @@ node[bunker_type=command] {
   icon-width: 15;
 }
 
-node[name=~/.*tobruk.*/] {
+node[bunker_type=tobruk] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_tobruk.png');
   icon-width: 15;
 }
 
-node[name=~/.*luft.*/] {
-  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_aa.png');
-  icon-width: 15;
-}
-
-node[name=~/.*lys.*/] {
-  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_search.png');
-  icon-width: 15;
-}
-
-node[old_name=~/.*kwk.*/] {
-  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_at.png');
-  icon-width: 15;
-}
-
-node[old_name=~/.*pak.*/] {
-  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_at.png');
-  icon-width: 15;
-}
-
-node[name=~/.*skyte.*/] {
+node[bunker_type=foxhole] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_foxhole.png');
   icon-width: 15;
 }
 
-node[name=~/.*torpedo.*/] {
+node[bunker_type=torpedo_launcher] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_torpedo.png');
   icon-width: 15;
 }
 
-node[name=~/.*radar.*/] {
-  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_radar.png');
-  icon-width: 15;
-}
-
-node[name=~/.*obs.*/] {
+node[bunker_type=observation] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_obs.png');
   icon-width: 15;
 }
 
-node[name=~/.*flam.*/] {
+node[bunker_type=flamethrower] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_flame.png');
   icon-width: 15;
 }
