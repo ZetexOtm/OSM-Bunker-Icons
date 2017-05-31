@@ -94,6 +94,11 @@ node[gun_emplacement_type=antitank] {
   icon-width: 15;
 }
 
+node[gun_emplacement_type=howitzer] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_howitzer.png');
+  icon-width: 15;
+}
+
 node[bunker_type=personnel_shelter] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_personnel.png');
   icon-width: 15;
