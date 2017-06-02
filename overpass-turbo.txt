@@ -8,8 +8,9 @@ The original search was:
 (
   // query part for: “military=bunker”
   node["military"="bunker"]({{bbox}});
+  node["historic"="fort"]({{bbox}});
   node["man_made"="adit"]({{bbox}});
-  node["entrance"~"./*"]({{bbox}});
+//  node["entrance"~"./*"]({{bbox}});
   way["military"="bunker"]({{bbox}});
   relation["military"="bunker"]({{bbox}});
 );
@@ -96,6 +97,11 @@ node[gun_emplacement_type=antitank] {
 
 node[gun_emplacement_type=howitzer] {
   icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_howitzer.png');
+  icon-width: 15;
+}
+
+node[gun_emplacement_type=tankturret] {
+  icon-image: url('https://github.com/ZetexOtm/OSM-Bunker-Icons/raw/master/OSM-Bunker-Icons/w_bunker_turret.png');
   icon-width: 15;
 }
 
